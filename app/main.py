@@ -1,6 +1,7 @@
 from typing import Callable, Any
 from functools import wraps
-#Solution 
+
+
 def cache(func: Callable) -> Callable:
     cache_data = {}
 
@@ -14,6 +15,4 @@ def cache(func: Callable) -> Callable:
         result = func(*args, **kwargs)
         cache_data[key] = result
         return result
-    
-
     return wrapper
